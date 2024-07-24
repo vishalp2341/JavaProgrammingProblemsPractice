@@ -26,7 +26,7 @@ public class PrintAllSubarraysWhoseSumisK {
 
 	static void subar(int[] ar, int k) 
 	{
-		
+		boolean kfound=false;
 		for (int size = 1; size <= ar.length; size++) 
 		{
 			for (int i = 0; i <= ar.length - size; i++) 
@@ -39,6 +39,7 @@ public class PrintAllSubarraysWhoseSumisK {
 
 				if (sum == k) 
 				{
+					kfound = true;
 					for (int j = i; j < i + size; j++)
 					{
 						System.out.print(ar[j]+" ");
@@ -46,6 +47,10 @@ public class PrintAllSubarraysWhoseSumisK {
 					System.out.println();
 				}
 			}
+		}
+		if(kfound==false)
+		{
+			System.out.println("None");
 		}
 		
 	}
