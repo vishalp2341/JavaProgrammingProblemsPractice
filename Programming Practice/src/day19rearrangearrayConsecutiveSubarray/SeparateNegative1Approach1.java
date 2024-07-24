@@ -1,4 +1,4 @@
-package day19rearrangearray.ConsecutiveSubarray;
+package day19rearrangearrayConsecutiveSubarray;
 
 import java.util.Scanner;
 
