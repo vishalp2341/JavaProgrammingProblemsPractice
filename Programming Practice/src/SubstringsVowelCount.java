@@ -27,7 +27,7 @@ public class SubstringsVowelCount {
 					}
 				}
 
-				if (allVowels) 
+				if (allVowels == true) 
 				{
 					Count++;
 				}
