@@ -1,6 +1,6 @@
 class A {
 	static int i = 100;
-	
+
 }
 
 class B extends A {
