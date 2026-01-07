@@ -2,7 +2,7 @@ package practice_1;
 
 import java.util.Scanner;
 
-public class arrayPairMinimum {
+public class primeNumberPairs {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -19,21 +19,33 @@ public class arrayPairMinimum {
 			ar[i] = scan.nextInt();
 		}
 		
-		for(int i = 0; i < ar.length - 1; i++)
+		for(int i = 0; i<ar.length-1; i++)
 		{
-			for(int j = i+1; j < ar.length; j++)
+			for(int j = i+1; j<ar.length; j++)
 			{
-				int prod = ar[i] * ar[j];
-//				System.out.println(ar[i] + " " + ar[j] );
-//				System.out.println(prod );
-				if(prod < min)
-				{
-					min = prod;
-				}
+				if(checkPrime(ar[i]) && checkPrime(ar[j]))
+				System.out.println(ar[i] + " " + ar[j]);
 			}
 		}
-		System.out.println(min);
 
+	}
+	
+	public  static boolean checkPrime(int n)
+	{
+		if(n <= 1)
+		{
+			return false;
+		}
+		for(int i = 2; i*i <= n; i++)
+		{
+			if(n%i == 0)
+			{
+				return false;
+			}
+			
+			
+		}
+		return true;
 	}
 
 }
