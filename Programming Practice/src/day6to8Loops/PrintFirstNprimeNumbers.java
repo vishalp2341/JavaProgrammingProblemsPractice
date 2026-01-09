@@ -8,22 +8,25 @@ public class PrintFirstNprimeNumbers {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("enter the number of prime numbers to be printed");
 		int n = scan.nextInt();
-		printPrime(n);
-
-	}
-
-	static void printPrime(int n) {
+		
 		int count = 0;
-		for (int i = 2; count <n; i++) {
+		for (int i = 1; count <n; i++) {
 			if (checkPrime(i)) {
 				count++;
-				System.out.println(i);
+				System.out.print(i+" ");
 			}
-
+			
 		}
+
 	}
 
+	
 	static boolean checkPrime(int n) {
+		
+		if(n<2)
+		{
+			return false;
+		}
 		for (int i = 2; i * i <= n; i++) {
 			if (n % i == 0) {
 				return false;
