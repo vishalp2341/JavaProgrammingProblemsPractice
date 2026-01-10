@@ -30,7 +30,7 @@ public class RemoveSplCharAndAdd {
 				else if(ch >= '0' && ch <= '9')
 			
 				{
-					sum = sum + (ch-48);
+					sum = sum + (ch-'0');
 				}
 				
 		}
