@@ -23,8 +23,7 @@ public class RemoveArrayDuplicatesANDSort
 		{
 			set.add(ar[i]);
 		}
-		
-		String res = ""; 
+	
 		
 		for(int x : set)
 		{
